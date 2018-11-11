@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion compile_sdk_version
+    defaultConfig {
+        applicationId "com.uber.test.flickersearch"
+        minSdkVersion minimum_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding.enabled = true
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$x_appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$x_constraint_layout_version"
+    implementation "com.google.android.material:material:$material_design_version"
+    implementation "android.arch.lifecycle:extensions:$architecture_component_version"
+    implementation "android.arch.lifecycle:viewmodel:$architecture_component_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutine_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test:runner:$test_runnner_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+    androidTestImplementation 'androidx.test:rules:1.1.0'
+    testImplementation 'org.mockito:mockito-core:2.7.22'
+    androidTestImplementation 'org.mockito:mockito-android:2.7.22'
+}

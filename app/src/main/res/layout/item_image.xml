@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="data" type="com.uber.test.flickersearch.PhotoData"/>
+    </data>
+    <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:src="@{data.getPhotoUrl()}"
+            tools:src="@drawable/ic_android"
+            android:contentDescription="@string/image_content_desc"/>
+</layout>

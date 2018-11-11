@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlickerSearch</string>
+    <string name="search_hint">Search in Flicker</string>
+    <string name="search_blank_error_message">Please enter a search query</string>
+    <string name="search_loading_message">Trying to fetch data, please wait !!!</string>
+    <string name="image_content_desc">Flicker Image</string>
+</resources>
